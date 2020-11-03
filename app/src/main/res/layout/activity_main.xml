@@ -14,7 +14,7 @@
     <ImageView
             android:layout_width="190dp"
             android:layout_height="219dp"
-            android:src="@color/cardview_dark_background"
+            android:src="@color/colorAccent"
             tools:srcCompat="@tools:sample/avatars"
             android:id="@+id/show_picture_imageview"
             app:layout_constraintTop_toTopOf="parent"
