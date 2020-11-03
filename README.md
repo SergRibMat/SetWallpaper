@@ -42,6 +42,22 @@ method.
 
 As its shwown in the GIF, the image appears after i come back to the activity.
 
+SOMETHING IS BEING LOADED
+
+In case you did not notice, the time between the image is being loaded and the image is already loaded
+is indicated with a spinner animation, so the user knows that the program is working on it.
+
+For finishing, i will give you a GIF to see the Set Wallpaper functionality
+
+![WallpaperChange](https://user-images.githubusercontent.com/54866393/98016724-9f831a00-1dfe-11eb-9789-18543485912d.gif)
+
+The number that you can see at the bottom of the Activity is the resolution of the device. I did not use it here
+but it was a good way to test a method that i needed and post it in my repo.
+
+If you arrived to this point, thanks for your time and I hope you found it interesting. :D
+
+
+
 
 
 
