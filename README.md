@@ -14,6 +14,10 @@ Libraries i used
 - Glide
 - Coroutines 
 
+Permissions
+
+- SET_WALLPAPER
+
 What does the app do? 
 
 It is a single Activity application that takes the path of an image from your device, prints it on a View
