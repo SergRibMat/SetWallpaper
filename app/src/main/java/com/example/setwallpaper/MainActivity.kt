@@ -19,9 +19,9 @@ const val REQUEST_IMAGE_GET = 101
 class MainActivity : AppCompatActivity() {
 
 
-    var myUri: String? = null
-    private var viewModelJob = Job()
-    private val uiScope = CoroutineScope(Dispatchers.IO + viewModelJob)
+    var stringPathToImage: String? = null
+    private var activityJob = Job()
+    private val uiScope = CoroutineScope(Dispatchers.IO + activityJob)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setWallpaperMethod() {//call this method on a background thread
-        if (!myUri.isNullOrEmpty()) {
+        if (!stringPathToImage.isNullOrEmpty()) {
             uiScope.launch {
                 val wallpaperManager: WallpaperManager = WallpaperManager.getInstance(applicationContext)
                 if (wallpaperManager.isSetWallpaperAllowed) {
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     fun oneOrMultiple(data: Intent?) {
         if (data != null) {
             printImageWithGlide(data.dataString!!)
-            myUri = data.dataString!!
+            stringPathToImage = data.dataString!!
         }
     }
 
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getImageWithGlide() = Glide.with(this)
         .asBitmap()
-        .load(myUri)
+        .load(stringPathToImage)
         .submit()
         .get()
 
